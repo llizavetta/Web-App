@@ -1154,7 +1154,6 @@ input:focus {
         font-size: 1.8em;
     }
 
-    /* Кнопки "Skills" */
     .header__skills {
         flex-wrap: wrap;
         justify-content: center;

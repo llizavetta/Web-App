@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const sidebar = document.querySelector('.sidebar');
-    const teamSection = document.getElementById('team');
+    
     const sections = document.querySelectorAll('.content-area > *[id]');
     const navLinks = document.querySelectorAll('.sidebar__nav a');
 
@@ -8,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const id = entry.target.getAttribute('id');
+                
                 navLinks.forEach(l => l.classList.remove('active'));
                 
                 const link = document.querySelector(`.sidebar__nav a[href="#${id}"]`);
@@ -16,32 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
-    }, { rootMargin: '0px 0px -50% 0px' });
+    }, { 
+        rootMargin: '0px 0px -50% 0px' 
+    });
 
     sections.forEach(section => observer.observe(section));
 
-    const toggleSidebar = () => {
-        const teamRect = teamSection.getBoundingClientRect();
-
-        if (teamRect.top <= 100) { 
-            sidebar.style.opacity = '1';
-            sidebar.style.visibility = 'visible';
-        } else {
-            sidebar.style.opacity = '0';
-            sidebar.style.visibility = 'hidden';
-        }
-    };
-
-    window.addEventListener('scroll', toggleSidebar);
-    toggleSidebar();
-
-});
-
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-
+    
+    
     const gridViewBtn = document.getElementById('view-grid');
     const listViewBtn = document.getElementById('view-list');
     const photosContainer = document.querySelector('.photos__container');
@@ -64,5 +46,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     gridViewBtn.addEventListener('click', () => switchView('grid'));
     listViewBtn.addEventListener('click', () => switchView('list'));
-    
 });

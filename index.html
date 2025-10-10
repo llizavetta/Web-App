@@ -153,93 +153,158 @@
                 </div>
             </section>
 
-            <section class="cv__part" id="create-cv">
-                <div class="container">
-                    <div class="cv-container">
-                        <h1 class="form-title">Create CV</h1>
+
+
+            <section id="create-cv" class="cv__part">
+        <div class="container">
+
+            <div id="initial-button-wrapper" class="initial-screen">
+    <h1 class="initial-title">Create your perfect CV in minutes!</h1>
+    <p class="initial-subtitle">Create a CV easily — even without work experience. We will help you make a great first impression!</p>
+    
+    <p id="dynamic-benefit-text" class="dynamic-text-display"></p>
+    
+    <button id="start-cv-button" class="create-button alt-style">
+        Create CV
+    </button>
+</div>
+
+
+
+
+            <div id="cv-form-wrapper" class="cv-container hidden">
+                <h1 class="form-title">Create CV</h1>
+                
+                <form class="cv-form" id="cv-form">
+                    <input type="file" id="photo-input" accept="image/*" class="hidden">
+                    
+                    <div class="form-section left-section">
+                        <div class="form-group">
+                            <label for="full-name">Full name</label>
+                            <input type="text" id="full-name" name="full-name" placeholder="John David Smith" required>
+                        </div>
                         
-                        <form class="cv-form">
-                            <div class="form-section left-section">
-                                <div class="form-group">
-                                    <label for="full-name">Full name</label>
-                                    <input type="text" id="full-name" name="full-name" placeholder="John David Smith">
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label for="gender">Gender</label>
-                                    <div class="input-with-icon select-wrapper">
-                                        <select id="gender" name="gender">
-                                            <option value="" disabled selected>Select gender</option>
-                                            <option value="male">Male</option>
-                                            <option value="female">Female</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="date-of-birth">Date of birth</label>
-                                    <input type="date" id="date-of-birth" name="date-of-birth">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="place-of-birth">Place of birth</label>
-                                    <input type="text" id="place-of-birth" name="place-of-birth" placeholder="Kyiv, Ukraine">
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label for="citizenship">Citizenship</label>
-                                    <input type="text" id="citizenship" name="citizenship" placeholder="Ukrainian">
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label for="marital-status">Marital status</label>
-                                    <div class="input-with-icon select-wrapper">
-                                        <select id="marital-status" name="marital-status">
-                                            <option value="" disabled selected>Select status</option>
-                                            <option value="single">Single</option>
-                                            <option value="married">Married</option>
-                                            <option value="divorced">Divorced</option>
-                                            <option value="widowed">Widowed</option>
-                                        </select>
-                                    </div>
-                                </div>
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <div class="select-wrapper">
+                                <select id="gender" name="gender" required>
+                                    <option value="" disabled selected>Select gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
                             </div>
+                        </div>
 
-                            <div class="form-section right-section">
-                                <div class="form-group photo-upload">
-                                    <div class="add-photo-button">
-                                        <span>Add photo</span>
-                                        <img src="images/add_ph_icon.png" alt="">
-                                    </div>
-                                </div>
+                        <div class="form-group">
+                            <label for="date-of-birth">Date of birth</label>
+                            <input type="date" id="date-of-birth" name="date-of-birth" required>
+                        </div>
 
-                                <div class="form-group">
-                                    <label for="home-address">Home address</label>
-                                    <input type="text" id="home-address" name="home-address" placeholder="123 Main St, Apt 4B, Anytown">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="phone">Phone</label>
-                                    <input type="text" id="phone" name="phone" placeholder="+380 (50) 123-45-67">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" placeholder="john.smith@professional.com">
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label for="work-experience">Work experience</label>
-                                    <textarea id="work-experience" name="work-experience" placeholder="Summarize key duties, projects, and achievements"></textarea>
-                                </div>
+                        <div class="form-group">
+                            <label for="place-of-birth">Place of birth</label>
+                            <input type="text" id="place-of-birth" name="place-of-birth" placeholder="Kyiv, Ukraine">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="citizenship">Citizenship</label>
+                            <input type="text" id="citizenship" name="citizenship" placeholder="Ukrainian">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="marital-status">Marital status</label>
+                            <div class="select-wrapper">
+                                <select id="marital-status" name="marital-status">
+                                    <option value="" disabled selected>Select status</option>
+                                    <option value="Single">Single</option>
+                                    <option value="Married">Married</option>
+                                    <option value="Divorced">Divorced</option>
+                                    <option value="Widowed">Widowed</option>
+                                </select>
                             </div>
-                            
-                            <button type="submit" class="create-button">Create</button>
-                        </form>
+                        </div>
+                    </div>
+
+                    <div class="form-section right-section">
+                        <div class="form-group photo-upload">
+                            <label>Your Photo</label>
+                            <div class="add-photo-button" id="add-photo-button">
+                                <img src="images/add_ph_icon.png" alt="">
+                                <span id="photo-text">Add photo</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="home-address">Home address</label>
+                            <input type="text" id="home-address" name="home-address" placeholder="123 Main St, Apt 4B, Anytown">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+380 (50) 123-45-67">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="john.smith@professional.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="work-experience">Work experience</label>
+                            <textarea id="work-experience" name="work-experience" placeholder="Summarize key duties, projects, achievements, and education."></textarea>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="create-button">
+                        Create CV
+                    </button>
+                </form>
+            </div>
+
+            <div id="cv-display-wrapper" class="cv-display hidden">
+                <div class="cv-header">
+                    <h1 class="cv-name" id="display-full-name"></h1>
+                    <div class="cv-photo-placeholder" id="display-photo">
+                        <i class="ph-bold ph-user" style="font-size: 40px;"></i>
                     </div>
                 </div>
-            </section>
+
+                <div class="cv-section">
+                    <h2>Contact and Personal Information</h2>
+                    <div class="cv-details-grid">
+                        <div class="cv-item"><i class="ph-bold ph-envelope-simple"></i><strong>Email:</strong><span id="display-email"></span></div>
+                        <div class="cv-item"><i class="ph-bold ph-phone"></i><strong>Phone:</strong><span id="display-phone"></span></div>
+                        <div class="cv-item"><i class="ph-bold ph-house-line"></i><strong>Address:</strong><span id="display-address"></span></div>
+                        <div class="cv-item"><i class="ph-bold ph-cake"></i><strong>Date of Birth:</strong><span id="display-dob"></span></div>
+                        <div class="cv-item"><i class="ph-bold ph-globe-simple"></i><strong>Citizenship:</strong><span id="display-citizenship"></span></div>
+                        <div class="cv-item"><i class="ph-bold ph-heart"></i><strong>Marital Status:</strong><span id="display-marital-status"></span></div>
+                        <div class="cv-item"><i class="ph-bold ph-gender-neuter"></i><strong>Gender:</strong><span id="display-gender"></span></div>
+                        <div class="cv-item"><i class="ph-bold ph-map-pin"></i><strong>Place of Birth:</strong><span id="display-pob"></span></div>
+                    </div>
+                </div>
+                
+                <div class="cv-section">
+                    <h2>Work Experience and Education</h2>
+                    <div class="cv-experience">
+                        <p id="display-work-experience"></p>
+                    </div>
+                </div>
+                
+                <button id="back-to-form" class="back-button">
+                    <i class="ph-bold ph-pencil-simple"></i> Edit CV
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
 
 
             <footer class="cv-footer" id="contact">

@@ -525,6 +525,72 @@ a {
 
 
 
+.cv-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 9999;
+    overflow-y: auto;
+    padding: 40px 0;
+}
+
+.cv-modal-content {
+    background: #162F58;
+    width: 95%;
+    max-width: 1400px;
+    border-radius: 20px;
+    padding: 0;
+    animation: cvShow 0.25s ease;
+    position: relative;
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+
+@keyframes cvShow {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+
+.cv-close {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    font-size: 38px;
+    cursor: pointer;
+    color: #fff;
+    z-index: 10000;
+    transition: 0.3s;
+}
+
+.cv-close:hover {
+    color: #6A329C;
+    transform: scale(1.2);
+}
+
+
+#main__cv {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .hero {
     background-image: url(../images/hero-bg.png);
     color: #fff;
@@ -1125,10 +1191,6 @@ textarea:focus {
 
 
 
-.main__cv {
-    background: #162F58;
-}
-
 .main-cv-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -1185,7 +1247,6 @@ textarea:focus {
 
 .profile-card {
     text-align: center;
-    position: sticky;
     top: 40px;
 }
 

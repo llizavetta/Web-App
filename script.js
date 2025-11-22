@@ -427,3 +427,29 @@ document.addEventListener("DOMContentLoaded", () => {
     if (gridViewBtn) gridViewBtn.addEventListener("click", () => switchView("grid"));
     if (listViewBtn) listViewBtn.addEventListener("click", () => switchView("list"));
 });
+
+
+document.querySelectorAll('.photos__item').forEach(item => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const personId = item.getAttribute('data-person');
+        const modal = document.getElementById(`cvModal${personId}`);
+        if(modal) modal.style.display = 'flex';
+    });
+});
+
+
+document.querySelectorAll('.cv-close').forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.closest('.cv-modal').style.display = 'none';
+    });
+});
+
+
+document.querySelectorAll('.cv-modal').forEach(modal => {
+    modal.addEventListener('click', (e) => {
+        if(e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});

@@ -104,42 +104,191 @@
 
 
                     <div class="photos__container">
-                        <a class="photos__item" href="#">
+                        <a class="photos__item" data-person="1">
                             <img src="images/student__ph.png" alt="">
                             <div class="photos__info">
-                                <h6 class="photos__info-title">
-                                    First and last name
-                                </h6>
-                                <p class="photos__info-text">
-                                    UI/UX / Frontend Developer
-                                </p>
+                                <h6 class="photos__info-title">Elias Vance</h6>
+                                <p class="photos__info-text">UI/UX / Frontend Developer</p>
                             </div>
                         </a>
-                        <a class="photos__item" href="#">
+                        <a class="photos__item" data-person="2">
                             <img src="images/student__ph.png" alt="">
                             <div class="photos__info">
-                                <h6 class="photos__info-title">
-                                    First and last name
-                                </h6>
-                                <p class="photos__info-text">
-                                    Short description in 2 words
-                                </p>
+                                <h6 class="photos__info-title">Anna Smith</h6>
+                                <p class="photos__info-text">Backend Developer</p>
                             </div>
                         </a>
-                        <a class="photos__item" href="#">
+                        <a class="photos__item" data-person="3">
                             <img src="images/student__ph.png" alt="">
                             <div class="photos__info">
-                                <h6 class="photos__info-title">
-                                    First and last name
-                                </h6>
-                                <p class="photos__info-text">
-                                    Short description in 2 words
-                                </p>
+                                <h6 class="photos__info-title">John Doe</h6>
+                                <p class="photos__info-text">Fullstack Developer</p>
                             </div>
                         </a>
                     </div>
                 </div>
             </div>
+
+
+
+<div id="cvModal1" class="cv-modal">
+    <div class="cv-modal-content">
+        <span class="cv-close">&times;</span>
+        <section class="main__cv">
+            <main class="main-cv-container">
+                <div class="cv-sidebar">
+                    <div class="card profile-card">
+                        <img src="https://placehold.co/150x150/6A329C/ffffff?text=PHOTO" alt="Фото Профиля" class="profile-photo">
+                        <h1>Elias Vance</h1>
+                        <p class="title">Senior Data Scientist / Machine Learning Engineer</p>
+                    </div>
+                    <div class="card">
+                        <h2 class="card-header"><img class="icon" src="images/contacts-icon.png" alt="">Contact & Personal Details</h2>
+                        <ul class="details-list">
+                            <li><strong>Gender:</strong> Male</li>
+                            <li><strong>Date of Birth:</strong> 01.01.1995</li>
+                            <li><strong>Place of Birth:</strong> Austin, TX, USA</li>
+                            <li><strong>Citizenship:</strong> United States</li>
+                            <li><strong>Marital Status:</strong> Single</li>
+                            <li><strong>Address:</strong> 42 Oak St, Silicon Valley, CA</li>
+                            <li><strong>Phone:</strong> +380 (50) XXX-XX-XX</li>
+                            <li><strong>Email:</strong> elias.vance@example.com</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h2 class="card-header"><img class="icon" src="images/languages-icon.png" alt="">Language Proficiency</h2>
+                        <div class="skill-item"><p class="skill-name"><span>English</span><span>Native / C2</span></p><div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div></div>
+                        <div class="skill-item"><p class="skill-name"><span>Spanish</span><span>Intermediate / B2</span></p><div class="progress-bar"><div class="progress-fill" style="width: 40%;"></div></div></div>
+                        <div class="skill-item"><p class="skill-name"><span>French</span><span>Basic / A1</span></p><div class="progress-bar"><div class="progress-fill" style="width: 40%;"></div></div></div>
+                    </div>
+                </div>
+
+                <div class="cv-content">
+                    <div class="card">
+                        <h2 class="card-header"><img class="icon" src="images/experience-icon.png" alt="">Professional Experience</h2>
+                        <div class="experience-item">
+                            <h4>Senior ML Engineer (Full-time)</h4>
+                            <p>Quantum Leap Analytics, San Francisco</p>
+                            <span class="date">Oct 2022 — Present</span>
+                            <p>Leading the development of high-impact predictive models for client retention and fraud detection. Optimized data pipelines using <strong>Apache Spark</strong> and <strong>Databricks</strong>, reducing processing time by 40%. Mentored junior data scientists.</p>
+                        </div>
+                        <div class="experience-item">
+                            <h4>Data Scientist (Full-time)</h4>
+                            <p>Innovate Tech Solutions, Seattle</p>
+                            <span class="date">Jan 2018 — Sept 2022</span>
+                            <p>Designed and implemented A/B testing frameworks for product features. Conducted exploratory data analysis (EDA) to drive key product decisions. Developed dashboards using <strong>Tableau</strong> and <strong>Power BI</strong>.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h2 class="card-header"><img class="icon" src="images/prog-icon.png" alt="">Programming & Technical Skills</h2>
+                        <div class="skill-item"><p class="skill-name"><span>Python (Data Science/ML)</span><span>Expert</span></p><div class="progress-bar"><div class="progress-fill" style="width: 95%;"></div></div></div>
+                        <div class="skill-item"><p class="skill-name"><span>R (Statistical Analysis)</span><span>Advanced</span></p><div class="progress-bar"><div class="progress-fill" style="width: 80%;"></div></div></div>
+                        <div class="skill-item"><p class="skill-name"><span>SQL/NoSQL (Postgres/MongoDB)</span><span>High Proficiency</span></p><div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div></div>
+                        <ul class="details-list">
+                            <li><strong>PC Availability:</strong> Yes, personal high-performance desktop</li>
+                            <li><strong>Working Hours/Week:</strong> 40-45 hours</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h2 class="card-header"><img class="icon" src="images/publications-icon.png" alt="">Research, Awards & Publications</h2>
+                        <p><strong>Research Interests:</strong> Deep Learning applications in computer vision, Reinforcement Learning (RL) for autonomous systems, Time Series Forecasting, and explainable AI (XAI).</p>
+                        <h3>Publications:</h3>
+                        <ul class="publications-list">
+                            <li>Vance, E.A., & Chen, L. (2024). Ensemble Methods for Highly Imbalanced Data in Finance. Journal of Applied ML, vol. 8, no. 1, pp. 112-130.</li>
+                            <li>Vance, E.A. (2023). A Comparative Study of Transformer Models for NLP. Proceedings of the International Data Science Conference (IDSC-2023).</li>
+                        </ul>
+                        <h3>Awards:</h3>
+                        <ul class="details-list">
+                            <li>2023: "Innovator of the Year" Award at Quantum Leap Analytics.</li>
+                            <li>2021: Best Research Paper Award at IDSC-2023.</li>
+                            <li>2019: Master's Degree with Honors in Computer Science, Stanford University.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h2 class="card-header"><img class="icon" src="images/hobby-icon.png" alt="">Hobbies & Interests</h2>
+                        <ul class="subjects-list details-list">
+                            <li>Linear Algebra & Calculus</li>
+                            <li>Artificial Intelligence / Data Structures</li>
+                            <li>Psychology (Cognitive Science)</li>
+                        </ul>
+                        <p>Enjoys rock climbing (regular indoor and outdoor trips). Practices mindfulness meditation. Talented in digital photography, focusing on complex urban landscapes. Active contributor to open-source Python libraries for data visualization.</p>
+                    </div>
+                </div>
+            </main>
+        </section>
+    </div>
+</div>
+
+<div id="cvModal2" class="cv-modal">
+    <div class="cv-modal-content">
+        <span class="cv-close">&times;</span>
+        <section class="main__cv">
+            <main class="main-cv-container">
+                <div class="cv-sidebar">
+                    <div class="card profile-card">
+                        <img src="https://placehold.co/150x150/FF5733/ffffff?text=PHOTO" alt="Фото Профиля" class="profile-photo">
+                        <h1>Anna Smith</h1>
+                        <p class="title">Backend Developer</p>
+                    </div>
+                    <div class="card">
+                        <h2 class="card-header"><img class="icon" src="images/contacts-icon.png" alt="">Contact & Personal Details</h2>
+                        <ul class="details-list">
+                            <li><strong>Gender:</strong> Female</li>
+                            <li><strong>Date of Birth:</strong> 02.02.1996</li>
+                            <li><strong>Place of Birth:</strong> New York, USA</li>
+                            <li><strong>Citizenship:</strong> United States</li>
+                            <li><strong>Marital Status:</strong> Single</li>
+                            <li><strong>Address:</strong> 15 Park Ave, New York, NY</li>
+                            <li><strong>Phone:</strong> +1 (555) 123-45-67</li>
+                            <li><strong>Email:</strong> anna.smith@example.com</li>
+                        </ul>
+                    </div>
+                    <!-- мови, досвід, навички і хобі -->
+                </div>
+                <div class="cv-content">
+                    <div class="card">
+                        <h2 class="card-header"><img class="icon" src="images/experience-icon.png" alt="">Professional Experience</h2>
+                        <p>---</p>
+                    </div>
+                </div>
+            </main>
+        </section>
+    </div>
+</div>
+
+<div id="cvModal3" class="cv-modal">
+    <div class="cv-modal-content">
+        <span class="cv-close">&times;</span>
+        <section class="main__cv">
+            <main class="main-cv-container">
+                <div class="cv-sidebar">
+                    <div class="card profile-card">
+                        <img src="https://placehold.co/150x150/33FF57/ffffff?text=PHOTO" alt="Фото Профиля" class="profile-photo">
+                        <h1>John Doe</h1>
+                        <p class="title">Fullstack Developer</p>
+                    </div>
+                </div>
+                <div class="cv-content">
+                    <div class="card">
+                        <h2 class="card-header"><img class="icon" src="images/experience-icon.png" alt="">Professional Experience</h2>
+                        <p>---</p>
+                    </div>
+                </div>
+            </main>
+        </section>
+    </div>
+</div>
+
+
+
+
+
+
+
+
 
             <section class="hero">
                 <div class="container">
